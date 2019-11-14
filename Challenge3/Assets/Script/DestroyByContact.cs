@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*************************************************************
+ * ==*==*==*==*==*==*   Hanniee Tran   ==*==*==*==*==*==*==*==
+ * ===================    DIG 3480    ========================
+ * ============    Computer As A Medium    ===================
+ * ==*==*==*==*==*==    Challenge 3    ==*==*==*==*==*==*==*==
+ ************************************************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,12 +31,17 @@ public class DestroyByContact : MonoBehaviour
     {
         //Debug.Log(other.name); //checking to see why asteroid disapear when test play game
 
-        if (other.tag == "Boundary") //make sure that if it the boundary it wont collide and destroy each other
+        if (other.tag == ("Boundary") || other.tag == ("Enemy")) //make sure that if it the boundary it wont collide and destroy each other
         {
             return;
         }
+
         //Explosion
-        Instantiate(explosion, transform.position, transform.rotation);
+        if (explosion != null) //check to see if they have explosion or not to use the code (added if statement on adding enemy bolt part)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
+
         if (other.tag == "Player")
         {
             Instantiate(playerExplosion, other.transform.position, other.transform.rotation);

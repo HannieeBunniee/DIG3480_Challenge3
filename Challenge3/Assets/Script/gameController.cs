@@ -40,7 +40,8 @@ public class gameController : MonoBehaviour
     {
         if (restart)
         {
-            if(Input.GetKeyDown (KeyCode.R))
+            //if (Input.anyKey) i misread it into ANY key that was pressed down
+            if (Input.GetKeyDown (KeyCode.F))
             {
                 SceneManager.LoadScene("Challenge3"); //the scense name, restarting the scense after press R
             }
@@ -73,7 +74,7 @@ public class gameController : MonoBehaviour
 
             if (gameOver) //check to see if gameover is true to get out of loop
             {
-                restartText.text = "Press 'R' for Restart";
+                restartText.text = "Press the 'F' Key to Restart";
                 restart = true;
                 break; // break out of while loop
             }
@@ -89,10 +90,10 @@ public class gameController : MonoBehaviour
 
     void UpdateScore()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Points: " + score;
         if (score >= 100)
         {
-            winText.text = "You win! Created by Hanniee";
+            winText.text = "You win!\nCreated by Hanniee";
             gameOver = true;
             restart = true;
         }

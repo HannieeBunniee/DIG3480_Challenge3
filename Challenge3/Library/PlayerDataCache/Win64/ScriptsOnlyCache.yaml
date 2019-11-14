@@ -4,10 +4,13 @@ ScriptsOnlyBuild:
     - DestroyByBoundary
     - DestroyByContact
     - DestroyByTime
+    - EvasiveManeuver
     - Mover
     - PlayerController
     - RandomRotator
+    - backgroundScroller
     - gameController
+    - weaponController
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -23,7 +26,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Tutorial3.unity:
+    Assets/Scenes/Challenge3.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -82,9 +85,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10190}
     - Class: 114
       Script: {instanceID: 10362}
+    - Class: 114
+      Script: {instanceID: 13796}
+    - Class: 114
+      Script: {instanceID: 15300}
+    - Class: 114
+      Script: {instanceID: 16356}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -565,7 +576,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: eecf95582d490cda5e562221d941ee12
+      Hash: b7345b9f4d249f12af9dc9da79a70f64
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameController
@@ -845,7 +856,25 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: be2d1663d6bc8ce39ce9c8dea6a963c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: backgroundScroller
+  - hash:
+      serializedVersion: 2
+      Hash: de7d6a5820dded6c7f75780e98f1dc41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: weaponController
+  - hash:
+      serializedVersion: 2
+      Hash: 757d56d0910fdc18d03e5b801da35a3f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EvasiveManeuver
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Tutorial3.unity
-  playerPath: D:/Documents/Githubs/Tutorial-3/Tutorial3/Build/Tutorial3.exe
+  - Assets/Scenes/Challenge3.unity
+  playerPath: D:/Documents/Githubs/Challenge3_git/Challenge3/Build/Challenge3.exe
